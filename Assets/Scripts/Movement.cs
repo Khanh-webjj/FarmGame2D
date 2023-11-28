@@ -8,19 +8,23 @@ public class Movement : MonoBehaviour
 
     public Animator animator;
 
+    public Vector3 direction;
+
     // input from player
     // apply movement to sprite
-    
+
     private void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 direction = new Vector3(horizontal, vertical);
+        direction = new Vector3(horizontal, vertical, 0);
 
         AnimateMovement(direction);
-
-        transform.position += direction * speed * Time.deltaTime;
+    }
+    private void FixedUpdate()
+    {
+        this.transform.position += direction * speed * Time.deltaTime;
     }
 
     void AnimateMovement(Vector3 direction)
