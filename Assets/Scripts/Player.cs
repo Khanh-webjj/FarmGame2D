@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int numCarrotSeed;
+    public Inventory inventory;
+
+    private void Awake()
+    {
+        inventory = new Inventory(21);
+    }
+
 }

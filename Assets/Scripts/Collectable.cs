@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    public CollectableType type;
+
     // Player move onto collectable
     // collectable add to Player
     // delete collectable on the screen
@@ -13,8 +15,13 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (player != null)
         {
-            player.numCarrotSeed ++ ;
+            player.inventory.Add(type);
             Destroy(this.gameObject);
         }
     }
+}
+
+public enum CollectableType
+{
+    NONE, CARROT_SEED, POTATO_SEED, EGG 
 }
