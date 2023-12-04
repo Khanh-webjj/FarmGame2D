@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Collectable : MonoBehaviour
 {
     public CollectableType type;
+    public Sprite icon;
 
     // Player move onto collectable
     // collectable add to Player
@@ -15,7 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (player != null)
         {
-            player.inventory.Add(type);
+            player.inventory.Add(this);
             Destroy(this.gameObject);
         }
     }
