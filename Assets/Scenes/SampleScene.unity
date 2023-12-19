@@ -33556,7 +33556,11 @@ PrefabInstance:
     - target: {fileID: 6630391704598511204, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: icon
       value: 
-      objectReference: {fileID: 1189259666, guid: b20b7e42e8e646c44880a24a55ab338a, type: 3}
+      objectReference: {fileID: 1464954411, guid: 4804024e909269b40aca6f27d6c03178, type: 3}
+    - target: {fileID: 6630391704598511204, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

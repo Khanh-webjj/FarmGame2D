@@ -15,7 +15,7 @@ public class Inventory_UI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
-            SetUp();
+            Refresh();
         }    
     }
 
@@ -31,7 +31,7 @@ public class Inventory_UI : MonoBehaviour
         }
     } 
 
-    void SetUp()
+    void Refresh()
     {
         if(slots.Count == player.inventory.slots.Count)
         {
