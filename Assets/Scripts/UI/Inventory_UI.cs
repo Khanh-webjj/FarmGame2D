@@ -53,6 +53,12 @@ public class Inventory_UI : MonoBehaviour
     {
         Collectable itemToDrop
             = GameManager.instance.itemManager.GetItemByType(player.inventory.slots[slotID].type);
+        Debug.Log(
+            ("type: " + player.inventory.slots[slotID].type) + "\n" +
+            ("does itemToDrop exist: " + (itemToDrop!=null ? "yes" :  "no")) + "\n" +
+            ("amount of item in ColDict : " + GameManager.instance.itemManager.DictCount()) + "\n" +
+            ("ColDict : " + GameManager.instance.itemManager.DictInfor())
+        );
 
         if (itemToDrop != null)
         {

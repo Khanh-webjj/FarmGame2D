@@ -31,6 +31,28 @@ public class ItemManager : MonoBehaviour
         {
             return collectableItemsDict[type];
         }
-        return null;
+        else
+        {
+            return null;
+        }
+    }
+
+
+    public int DictCount()
+    {
+        return collectableItemsDict.Count;
+    }
+    public bool DictIsEmpty()
+    {
+        return collectableItemsDict.Count == 0;
+    }
+    public string DictInfor()
+    {
+        string infor = "";
+        foreach (KeyValuePair<CollectableType, Collectable> kvp in collectableItemsDict)
+        {
+            infor += ("Key = {0} + Value = {1}" + kvp.Key + kvp.Value.ToString()) + "\n";
+        }
+        return infor;
     }
 }

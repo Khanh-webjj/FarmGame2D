@@ -82,6 +82,6 @@ public class Inventory
 
     public void Remove(int index)
     {
-        slots[index].RemoveItem();
+        this.slots[index].RemoveItem();
     }
 }

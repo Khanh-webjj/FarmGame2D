@@ -14,8 +14,7 @@ public class Collectable : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
     } 
-
-
+    
     // Player move onto collectable
     // collectable add to Player
     // delete collectable on the screen
@@ -28,6 +27,38 @@ public class Collectable : MonoBehaviour
             player.inventory.Add(this);
             Destroy(this.gameObject);
         }
+    }
+
+
+    override
+    public string ToString()
+    {
+        string type = "";
+        switch (this.type) 
+        {
+            case CollectableType.NONE:
+                {
+                    type = "NONE";
+                    break;
+                }
+            case CollectableType.CARROT_SEED:
+                {
+                    type = "CARROT_SEED";
+                    break;
+                }
+            case CollectableType.POTATO_SEED:
+                {
+                    type = "POTATO_SEED";
+                    break;
+                }
+            case CollectableType.EGG:
+                {
+                    type = "EGG";
+                    break;
+                }
+        }
+
+        return "type: " + type;
     }
 }
 
