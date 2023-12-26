@@ -4,55 +4,34 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public Collectable[] collectableItems;
+    public Item[] items;
 
-    private Dictionary<CollectableType, Collectable> collectableItemsDict
-        = new Dictionary<CollectableType, Collectable> ();
+    private Dictionary<string, Item> nameToItemsDict
+        = new Dictionary<string, Item> ();
 
     private void Awake()
     {
-        foreach (Collectable item in collectableItems)
+        foreach (Item item in items)
         {
             AddItem (item);
         }
     }
 
-    private void AddItem(Collectable item)
+    private void AddItem(Item item)
     {
-        if (!collectableItemsDict.ContainsKey(item.type))
+        if (!nameToItemsDict.ContainsKey(item.data.itemName))
         {
-            collectableItemsDict.Add(item.type, item);
+            nameToItemsDict.Add(item.data.itemName, item);
         }
     }
 
-    public Collectable GetItemByType(CollectableType type)
+    public Item GetItemByName(string key)
     {
-        if (collectableItemsDict.ContainsKey(type))
+        if (nameToItemsDict.ContainsKey(key))
         {
-            return collectableItemsDict[type];
+            return nameToItemsDict[key];
         }
-        else
-        {
-            return null;
-        }
+        return null;
     }
 
-
-    public int DictCount()
-    {
-        return collectableItemsDict.Count;
-    }
-    public bool DictIsEmpty()
-    {
-        return collectableItemsDict.Count == 0;
-    }
-    public string DictInfor()
-    {
-        string infor = "";
-        foreach (KeyValuePair<CollectableType, Collectable> kvp in collectableItemsDict)
-        {
-            infor += ("Key = {0} + Value = {1}" + kvp.Key + kvp.Value.ToString()) + "\n";
-        }
-        return infor;
-    }
 }

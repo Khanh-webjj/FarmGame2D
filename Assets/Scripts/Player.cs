@@ -11,18 +11,30 @@ public class Player : MonoBehaviour
         inventory = new Inventory(21);
     }
 
-    public void DropItem(Collectable item)
+    void Update ()
     {
-        Vector3 spawnLocation = transform.position;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Vector3Int position = new Vector3Int ((int)transform.position.x, 
+                (int)transform.position.y, 0);
 
-        float randX = Random.Range(-1f, 1f);
-        float randY = Random.Range(-1f, 1f);
+            if (GameManager.instance.tileManager.IsInteractable(position))
+            {
+                Debug.Log("Tile is interactable");
+                GameManager.instance.tileManager.SetInteracted(position);
+            }
+        }
+    }
 
-        Vector3 spawnOffset = new Vector3(randX, randY, 0f).normalized;
+    public void DropItem(Item item)
+    {
+        Vector2 spawnLocation = transform.position;
 
-        Collectable dropedItem = 
+        Vector2 spawnOffset = Random.insideUnitCircle * 1.25f;
+
+        Item dropedItem = 
             Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
 
-        dropedItem.rb2d.AddForce(spawnOffset * 2f, ForceMode2D.Impulse);
+        //dropedItem.rb2d.AddForce(spawnOffset * 2f, ForceMode2D.Impulse);
     }
 }

@@ -10,6 +10,8 @@ public class Inventory_UI : MonoBehaviour
 
     public List<Slot_UI> slots = new List<Slot_UI>();
 
+    void Start () { inventoryPanel.SetActive(false); }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -37,7 +39,7 @@ public class Inventory_UI : MonoBehaviour
         {
             for(int i = 0; i < slots.Count; i++)
             {
-                if (player.inventory.slots[i].type != CollectableType.NONE)
+                if (player.inventory.slots[i].itemName != "")
                 {
                     slots[i].SetItem(player.inventory.slots[i]);
                 }
@@ -51,14 +53,8 @@ public class Inventory_UI : MonoBehaviour
 
     public void Remove(int slotID)
     {
-        Collectable itemToDrop
-            = GameManager.instance.itemManager.GetItemByType(player.inventory.slots[slotID].type);
-        Debug.Log(
-            ("type: " + player.inventory.slots[slotID].type) + "\n" +
-            ("does itemToDrop exist: " + (itemToDrop!=null ? "yes" :  "no")) + "\n" +
-            ("amount of item in ColDict : " + GameManager.instance.itemManager.DictCount()) + "\n" +
-            ("ColDict : " + GameManager.instance.itemManager.DictInfor())
-        );
+        Item itemToDrop
+            = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[slotID].itemName);
 
         if (itemToDrop != null)
         {
