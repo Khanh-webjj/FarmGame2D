@@ -9,7 +9,11 @@ public class Slot_UI : MonoBehaviour
     public Image itemIcon;
     public TextMeshProUGUI quantityText;
 
+<<<<<<< HEAD
     [SerializeField] public GameObject highlight;
+=======
+    [SerializeField] private GameObject highlight;
+>>>>>>> 622393fc2c79c57077e4ae78979d49ed5f7787ff
 
     public void SetItem(Inventory.Slot slot)
     {
@@ -28,8 +32,12 @@ public class Slot_UI : MonoBehaviour
         quantityText.text = "";
     }
 
+<<<<<<< HEAD
     public void SetHighlight(bool isOn)
     {
+=======
+    public void SetHighlight(bool isOn) {
+>>>>>>> 622393fc2c79c57077e4ae78979d49ed5f7787ff
         highlight.SetActive(isOn);
     }
 }
