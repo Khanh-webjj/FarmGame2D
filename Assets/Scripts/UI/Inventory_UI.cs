@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory_UI : MonoBehaviour
 {
@@ -9,6 +10,16 @@ public class Inventory_UI : MonoBehaviour
     public Player player;
 
     public List<Slot_UI> slots = new List<Slot_UI>();
+
+    [SerializeField] private Canvas canvas;
+
+    private Slot_UI draggedSlot;
+    private Image draggedIcon;
+
+    private void Awake()
+    {
+        canvas = FindObjectOfType<Canvas>();
+    }
 
     void Start () { inventoryPanel.SetActive(false); }
 
@@ -63,5 +74,49 @@ public class Inventory_UI : MonoBehaviour
             Refresh();
         }
         
+    }
+
+    public void SlotBeginDrag(Slot_UI slot)
+    {
+        draggedSlot = slot;
+        draggedIcon = Instantiate(draggedSlot.itemIcon);
+        draggedIcon.transform.SetParent(canvas.transform);
+        draggedIcon.raycastTarget = false;
+        draggedIcon.rectTransform.sizeDelta = new Vector2(50, 50);
+
+        MoveToMousePosition(draggedIcon.gameObject);
+        Debug.Log("Start Drag" + draggedSlot.name);
+    }
+
+    public void SlotDrag()
+    {
+        MoveToMousePosition(draggedIcon.gameObject);
+
+        Debug.Log("Dragging" + draggedSlot.name);
+    }
+
+    public void SlotEndDrag()
+    {
+        Destroy(draggedIcon.gameObject);
+        draggedIcon = null;
+
+        Debug.Log("Done Dragging" + draggedSlot.name);
+    }
+
+    public void SlotDrop(Slot_UI slot)
+    {
+        Debug.Log("Dropped" + draggedSlot.name + " on " +  slot.name);
+    }
+
+    private void MoveToMousePosition(GameObject toMove)
+    {
+        if( canvas != null )
+        {
+            Vector2 position;
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, null, out position);
+
+            toMove.transform.position = canvas.transform.TransformPoint(position);
+        }
     }
 }
