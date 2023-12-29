@@ -15,6 +15,7 @@ public class Inventory_UI : MonoBehaviour
 
     private Slot_UI draggedSlot;
     private Image draggedIcon;
+    private bool dragSingle;
 
     private void Awake()
     {
@@ -30,6 +31,15 @@ public class Inventory_UI : MonoBehaviour
             ToggleInventory();
             Refresh();
         }    
+
+        if (Input.GetKey(KeyCode.LeftShift)) 
+        {
+            dragSingle = true;
+        }
+        else
+        {
+            dragSingle = false;
+        }
     }
 
     public void ToggleInventory()
@@ -62,17 +72,27 @@ public class Inventory_UI : MonoBehaviour
         }
     }
 
-    public void Remove(int slotID)
+    public void Remove()
     {
         Item itemToDrop
-            = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[slotID].itemName);
+            = GameManager.instance.itemManager.GetItemByName(player.inventory.slots[draggedSlot.slotID].itemName);
 
         if (itemToDrop != null)
         {
-            player.DropItem(itemToDrop);
-            player.inventory.Remove(slotID);
+            if(dragSingle)
+            {
+                player.DropItem(itemToDrop);
+                player.inventory.Remove(draggedSlot.slotID);
+            }
+            else
+            {
+                player.DropItem(itemToDrop, player.inventory.slots[draggedSlot.slotID].count);
+                player.inventory.Remove(draggedSlot.slotID, player.inventory.slots[draggedSlot.slotID].count);
+            }          
             Refresh();
         }
+
+        draggedSlot = null;
         
     }
 

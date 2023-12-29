@@ -84,4 +84,14 @@ public class Inventory
     {
         this.slots[index].RemoveItem();
     }
+    public void Remove(int index, int numToRemove)
+    {
+        if (slots[index].count >= numToRemove)
+        {
+            for(int i = 0;i < numToRemove;i++)
+            {
+                Remove(index);
+            }
+        }
+    }
 }
