@@ -13,13 +13,13 @@ public class Collectable : MonoBehaviour
     {
         Player player = collision.GetComponent<Player>();
 
-        if (player != null)
+        if (player)
         {
             Item item = GetComponent<Item>();
 
             if (item != null)
             {
-                player.inventory.Add(item);
+                player.inventory.Add("Backpack", item);
                 Destroy(this.gameObject);
             }
         }
