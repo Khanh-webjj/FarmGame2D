@@ -3274,11 +3274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5747,11 +5747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 4.96
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -1.19
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5859,26 +5859,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 680857251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 35706f44b89c49f4dbbaade1f7df951b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  inventoryPanel: {fileID: 0}
+  inventoryName: Toolbar
+  slots:
+  - {fileID: 1235441278}
+  - {fileID: 2107433627}
+  - {fileID: 2019864003}
+  - {fileID: 1005694499}
+  - {fileID: 913914251}
+  - {fileID: 382833290}
+  - {fileID: 1178641118}
+  - {fileID: 1030102117}
+  - {fileID: 1708814206}
+  canvas: {fileID: 0}
 --- !u!1 &705781552
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,7 +5996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1765481882}
-  player: {fileID: 796105823}
+  inventoryName: Backpack
   slots:
   - {fileID: 1113109847177249180}
   - {fileID: 1062979811}
@@ -6694,6 +6690,7 @@ GameObject:
   - component: {fileID: 796105822}
   - component: {fileID: 796105821}
   - component: {fileID: 796105823}
+  - component: {fileID: 796105824}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6816,8 +6813,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e751a73c9783cf4490e084f9318f784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory:
+  inventory: {fileID: 0}
+--- !u!114 &796105824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796105818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b916617cec49148ae01ad77c5b0b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backpack:
     slots: []
+  backpackSlotCount: 27
+  toolbar:
+    slots: []
+  toolbarSlotCount: 9
 --- !u!1 &827155566
 GameObject:
   m_ObjectHideFlags: 0
@@ -7398,11 +7412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -2.08
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7847,11 +7861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -3.72
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21695,6 +21709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 0}
   tileManager: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &1162662017
 Transform:
   m_ObjectHideFlags: 0
@@ -36868,11 +36883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.66
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.89
+      value: -2.17
       objectReference: {fileID: 0}
     - target: {fileID: 6140442066342976038, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
       propertyPath: m_LocalPosition.z
