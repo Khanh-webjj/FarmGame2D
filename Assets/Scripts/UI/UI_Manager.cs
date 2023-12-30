@@ -23,7 +23,7 @@ public class UI_Manager : MonoBehaviour
         if (Input.GetKey(KeyCode.Tab) || Input.GetKey(KeyCode.B)) {
             ToggleInventoryUI();
         }
-        if (Input.GetKey(KeyCode.LeftShift)) 
+        if (Input.GetKey(KeyCode.LeftControl)) 
         {
             dragSingle = true;
         }
