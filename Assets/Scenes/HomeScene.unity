@@ -133,10 +133,11 @@ GameObject:
   m_Component:
   - component: {fileID: 134822366}
   - component: {fileID: 134822365}
+  - component: {fileID: 134822367}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -200,6 +201,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &134822367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134822364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34417062297fadf49af24a54e563a1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &214474022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,14 +2534,16 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 1.0136024, y: -1.9827943}
+  - {x: 0.03446114, y: -2.002575}
+  - {x: 1.002265, y: -1.9968295}
   - {x: 1.0053282, y: -0.9885484}
   - {x: 6.002448, y: -0.99991584}
   - {x: 5.9884534, y: 6.61828}
   - {x: -6.006068, y: 6.622084}
   - {x: -6.0030565, y: -0.993438}
   - {x: -0.9843111, y: -1.005326}
-  - {x: -0.9877207, y: -1.984556}
+  - {x: -1.0061629, y: -2.0023437}
+  - {x: 0.035218596, y: -1.9995995}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
