@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     public Vector3 direction;
-    public Rigidbody2D rigidbody2D;
+    public new Rigidbody2D rigidbody2D;
     public InventoryManager inventory;
 
     public bool running = false;
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     private  Coroutine recharge;
 
-    private void Start()
+    private void Awake()
     {
         if (instance != null  &&  instance != this) {
             Destroy(this.gameObject);
@@ -35,14 +35,9 @@ public class Player : MonoBehaviour
         else {
             instance = this;
         }
+        inventory = GetComponent<InventoryManager>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         GameObject.DontDestroyOnLoad(this.gameObject);
-        
-    }
-
-    private void Awake()
-    {
-        inventory = GetComponent<InventoryManager>();
     }
     void Update ()
     {
