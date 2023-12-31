@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public Animator animator;
 
     public Vector3 direction;
-    public new Rigidbody2D rigidbody2D;
+    public Rigidbody2D rigidbody2D;
     public InventoryManager inventory;
 
     public bool running = false;
