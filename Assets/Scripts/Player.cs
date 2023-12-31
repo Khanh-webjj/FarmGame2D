@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     public float speed = 2f;
 
     public Animator animator;
@@ -27,7 +29,15 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        if (instance != null  &&  instance != this) {
+            Destroy(this.gameObject);
+        }
+        else {
+            instance = this;
+        }
         rigidbody2D = GetComponent<Rigidbody2D>();
+        GameObject.DontDestroyOnLoad(this.gameObject);
+        
     }
 
     private void Awake()

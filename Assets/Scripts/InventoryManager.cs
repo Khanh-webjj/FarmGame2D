@@ -13,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     [Header("Toolbar")]
     public Inventory toolbar;
     public int toolbarSlotCount;
+    
     private void Awake() {
         backpack = new Inventory(backpackSlotCount);
         toolbar = new Inventory(toolbarSlotCount);
