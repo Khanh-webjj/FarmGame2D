@@ -18250,6 +18250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
       value: ToolbarSlot (4)
@@ -18900,6 +18904,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
       value: ToolbarSlot (2)
@@ -19529,6 +19537,10 @@ PrefabInstance:
     - target: {fileID: 7282814096232590460, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
@@ -47970,6 +47982,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
       value: ToolbarSlot (5)
@@ -48723,6 +48739,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
       value: ToolbarSlot (8)
@@ -48993,6 +49013,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
       value: ToolbarSlot (1)
@@ -49262,6 +49286,10 @@ PrefabInstance:
     - target: {fileID: 7282814096232590460, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
@@ -63419,6 +63447,10 @@ PrefabInstance:
     - target: {fileID: 7282814096232590460, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7835368660929554068, guid: dd914437005f530488d0fd830e3b6286, type: 3}
+      propertyPath: slotID
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8047005403109940744, guid: dd914437005f530488d0fd830e3b6286, type: 3}
       propertyPath: m_Name
