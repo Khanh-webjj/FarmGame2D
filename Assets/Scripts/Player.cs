@@ -27,8 +27,13 @@ public class Player : MonoBehaviour
 
     private  Coroutine recharge;
 
+    private TileManager tileManager;
+    
+
     private void Start()
     {
+        tileManager = GameManager.instance.tileManager;
+
         if (instance != null  &&  instance != this) {
             Destroy(this.gameObject);
         }
@@ -40,6 +45,7 @@ public class Player : MonoBehaviour
         
     }
 
+
     private void Awake()
     {
         inventory = GetComponent<InventoryManager>();
@@ -49,6 +55,21 @@ public class Player : MonoBehaviour
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         direction.Normalize();
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (tileManager != null)
+            {
+                Vector3Int position = new Vector3Int((int)transform.position.x, (int)transform.position.y,0);
+                string tileName = tileManager.GetTileName(position);
+                if (!string.IsNullOrWhiteSpace(tileName))
+                {
+                    if (tileName == "Interactables" && inventory.toolbar.selectedSlot.itemName == "Hoe")
+                    {
+                        tileManager.SetInteracted(position);
+                    }
+                }
+            }
+        }
         if (Input.GetKeyDown(KeyCode.LeftShift))
 		{
             running = true;

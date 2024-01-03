@@ -70,7 +70,7 @@ public class Inventory
     }
 
     public List<Slot> slots = new List<Slot>();
-
+    public Slot  selectedSlot = null;
     public Inventory(int numSlot)
     {
         for(int i = 0; i < numSlot; i++)
@@ -127,4 +127,12 @@ public class Inventory
             }
         }
     }
+    public void SelectSlot(int index)
+    {
+        if (slots != null && slots.Count > 0)
+        {
+            selectedSlot = slots[index];
+        }
+    }
+
 }

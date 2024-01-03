@@ -9,7 +9,7 @@ public class TileManager : MonoBehaviour
 
     [SerializeField] private Tile hiddenInteractableTile;
 
-    [SerializeField] private Tile interactedTile; 
+    [SerializeField] private Tile plowedTile; 
 
     void Start()
     {
@@ -24,23 +24,36 @@ public class TileManager : MonoBehaviour
         }
     }
 
-    public bool IsInteractable(Vector3Int position)
-    {
-        TileBase tile = interactableMap.GetTile(position);
+//    public bool IsInteractable(Vector3Int position)
+ //   {
+//        TileBase tile = interactableMap.GetTile(position);
+//
+ //       if(tile != null)
+ //       {
+ //           if(tile.name == "Interactables")
+//            {
+ //               return true;
+//            }
+//        }
 
-        if(tile != null)
-        {
-            if(tile.name == "Interactables")
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
+ //      return false;
+ //   }
 
     public void SetInteracted(Vector3Int position)
     {
-        interactableMap.SetTile(position, interactedTile);
+        interactableMap.SetTile(position, plowedTile);
+    }
+
+    public string GetTileName(Vector3Int position)
+    {
+        if (interactableMap != null)
+        {
+            TileBase tile = interactableMap.GetTile(position);
+            if (tile != null)
+            {
+                return tile.name;
+            }
+        }
+        return "";
     }
 }
