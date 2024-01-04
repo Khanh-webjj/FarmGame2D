@@ -35330,6 +35330,7 @@ GameObject:
   - component: {fileID: 1162662019}
   - component: {fileID: 1162662020}
   - component: {fileID: 1162662021}
+  - component: {fileID: 1162662022}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -35384,6 +35385,7 @@ MonoBehaviour:
   - {fileID: 7741636763266268359}
   - {fileID: 8485963144679856012, guid: 854044265949ace4d919ba7d372c6b63, type: 3}
   - {fileID: 2814324311732564756, guid: 3b4f237315105474ca5d869a618eeaf6, type: 3}
+  - {fileID: 8485963144679856012, guid: a50f0ffc6c68dcc46908c375c128523d, type: 3}
 --- !u!114 &1162662019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35493,6 +35495,21 @@ MonoBehaviour:
   textDay: {fileID: 1194812881}
   timeScale: 600
   globalLight: {fileID: 481873048}
+--- !u!114 &1162662022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162662015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664aded7df7f8a142b71db2c540f72b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plowed: {fileID: 11400000, guid: 7dc3690c1a74e014ba5d5fb8f7b9612e, type: 2}
+  seeded: {fileID: 11400000, guid: 514de4e3e805d7949a584a9e1e8c4a44, type: 2}
+  targetTileMap: {fileID: 1092087418}
 --- !u!1 &1172944276
 GameObject:
   m_ObjectHideFlags: 0
