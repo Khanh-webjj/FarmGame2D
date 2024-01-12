@@ -4,31 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-
-    public ItemManager itemManager;
-    public TileManager tileManager;
-    public UI_Manager uIManager;
-    public Player player;
-
-    public void Awake()
-    {
-        if (instance != null  &&  instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-
-        else
-        {
-            instance = this;
-        }
-
-        DontDestroyOnLoad(this.gameObject);
-
-        itemManager = GetComponent<ItemManager>();
-        tileManager = GetComponent<TileManager>();
-        uIManager = GetComponent<UI_Manager>();
-
-        player = FindObjectOfType<Player>();
-    }
+	public static GameManager Instance;
+	private void Awake()
+	{
+		Instance = this; 
+	}
+	public GameObject player;
+	public ItemContainer inventoryContainer;
+	public ItemDragAndDropController dragAndDropController;
+	public DayTimeController timeController;
+	public DiaglogueSystem diaglogueSystem;
+	public ItemList itemDB;
+	public OnScreenMessageSystem messageSystem;
+	public ScreenTint screenTint;
 }
